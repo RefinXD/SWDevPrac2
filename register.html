@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(white ,darkblue);
+            background-attachment: fixed;
+        }
+        div.main{
+            font-family: "Prompt Light",serif;
+            width: 80vw;
+            background-color: cornflowerblue;
+            margin: auto;
+            border: 5px solid;
+            border-radius: 20px;
+            border-color: white;
+            padding: 15px;
+            box-shadow: 0 20px 5px rgb(0 0 0/0.2);
+        }
+        button{
+            margin-top: 20px;
+            padding: 5px;
+        }
+        h1{
+            text-align: center;
+        }
+        *{
+            font-family: montserrat,sans-serif;
+        }
+        input.companyName{
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        input.chairAmount{
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        input.phone{
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        select.size{
+            font-size: 15px;
+        }
+        
+        
+
+    </style>
+
+
+</head>
+<body>
+    <div class="main">
+    <h1>
+        Registration Form
+    </h1>
+        <div>
+            <h4>Company name</h4>
+            <input class = "companyName" id = "companyName" name = "companyName" placeholder="Your Company name" size="30">
+                
+        </div>
+
+        <div>
+            <h4 class="size">Booth size</h4>
+            <select class="size" name = "size">
+                <option>5x5</option>
+                <option>10x10</option>
+                
+            </select>
+        </div>
+
+        <div>
+            <h4> Chairs </h4>
+            <input type = "checkbox" id = "chair" name = "chair"> Do you want chairs for your booth?
+        </div>
+
+        <div>
+            <h4> If you selected yes, please specify how many chairs you need </h4>
+            <input type = "number" class = "chairAmount" name = "chairAmount" placeholder="0">
+        </div>
+        
+        <div>
+            <h4> Contact Number </h4>
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" class = "phone"id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </div>
+        <div>
+            <button>Submit</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
