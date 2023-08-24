@@ -1,6 +1,6 @@
 div.card{
-    width: 20rem;
-    height: 25rem;
+    width: 25rem;
+    height: 30rem;
     background: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
@@ -12,11 +12,11 @@ div.cardimg {
     position:relative;
 }
 div.cardtitle{
-    margin-top: 8px;
+    margin: 10px;
     font-size: 1.25rem;
 }
 div.cardtext{
-    margin-top: 8px;
+    margin: 10px;
 }
 
 

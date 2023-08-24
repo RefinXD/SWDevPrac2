@@ -11,7 +11,9 @@ export default function ProductCard (){
                     objectFit='cover'/>            
             </div>
             <div className={styles.cardtitle}>Fact 1</div>
-            <div className={styles.cardtext}>All vaccines contain an active component (the antigen) which generates an immune response, or the blueprint for making the active component.</div>
+            <div className={styles.cardtext}>All vaccines contain an active 
+            component (the antigen) which generates an immune response, 
+            or the blueprint for making the active component.</div>
         </div>
     )
 }
