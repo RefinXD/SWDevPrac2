@@ -1,7 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   color: rgb(var(--foreground-rgb));
   margin: 0;
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 h1{
