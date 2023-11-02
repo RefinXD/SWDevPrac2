@@ -25,6 +25,8 @@ export default async function DetailPage({params}:{params:{hid:string}}) {
               <div>Postal Code: {hospitalDetail.data.postalcode}</div>
               <div>Telephone: {hospitalDetail.data.tel}</div>
             </div>
+
+          
         
     </div>
     </main>
