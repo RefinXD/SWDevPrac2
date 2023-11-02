@@ -26,7 +26,7 @@ export default async function TopMenu(){
                 : <Link href="/api/auth/signin"><div className='flex items-center absolute left-0 h-full px-2
                 absolute left-0 text-cyan-600 text-sm'>Sign-In</div></Link>
             }
-            <Link href="/mybooking"><div className='flex items-center absolute left-40 h-full px-2
+            <Link href="/mybooking"><div className='flex items-center absolute left-60 h-full px-2
             text-cyan-600 text-xl'>My Booking</div></Link>
             </div>
         </div> 

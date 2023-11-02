@@ -5,8 +5,16 @@ import getHospitals from '@/libs/getHospitals'
 import HospitalCatalog from '@/components/hospitalCatalog'
 import { Suspense } from 'react'
 import LinearProgress from '@mui/material/LinearProgress'
+import AddHospitalForm from '@/components/AddHospitalForm'
+import { getServerSession } from 'next-auth'
+import getUserProfile from '@/libs/getUserProfile'
+import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
 export default async function Home() {
+  const session = await getServerSession(authOptions)
+  if(!session || !session.user.token) return null
+  const profile = await getUserProfile(session.user.token)
+  var createdAt = new Date(profile.data.createdAt)    
   const hospital = await getHospitals()
   return (
       <main className = "text-center p-5">
@@ -14,6 +22,11 @@ export default async function Home() {
         <Banner/>
         <Suspense fallback ={<p>Loading...<LinearProgress/></p>}>
           <HospitalCatalog hospitalJson = {hospital}/>
+          {
+                    (profile.data.role =="admin")?
+                    <AddHospitalForm></AddHospitalForm>
+                    :null
+                }
         </Suspense>
       </main>
   )

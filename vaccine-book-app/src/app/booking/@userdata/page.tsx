@@ -10,7 +10,7 @@ export default async function UserData() {
     var createdAt = new Date(profile.data.createdAt)    
     
     return (
-        <main className="bg-slate-100 w-[100%] flex flex-col items-center space-y-4">
+        <main className="bg-slate-100 w-[100%] flex flex-col items-center space-y-4 py-10">
             <div className="text-2xl">Welcome, {profile.data.name}</div>
             <table className="table-auto border-separate border-spacing-2"><tbody>
                 <tr><td>Name</td><td>{profile.data.name}</td></tr>
@@ -18,6 +18,7 @@ export default async function UserData() {
                 <tr><td>Tel.</td><td>{profile.data.tel}</td></tr>
                 <tr><td>Member Since</td><td>{createdAt.toString()}</td></tr>
                 </tbody></table>
+                
         </main>
     )
 }
