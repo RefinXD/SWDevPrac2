@@ -12,21 +12,33 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/route'
 
 export default async function Home() {
   const session = await getServerSession(authOptions)
-  if(!session || !session.user.token) return null
+  const hospital = await getHospitals()
+  if(!session || !session.user.token) return (
+    <main className = "text-center p-5">
+  <Banner/>
+  <Suspense fallback ={<p>Loading...<LinearProgress/></p>}>
+    
+    <HospitalCatalog hospitalJson = {hospital}/>
+    </Suspense>
+    </main>
+    )
+  
   const profile = await getUserProfile(session.user.token)
   var createdAt = new Date(profile.data.createdAt)    
-  const hospital = await getHospitals()
   return (
       <main className = "text-center p-5">
         {/* <h1 className = 'text-xl font-medium'>Select Your Hospital</h1> */}
+        
         <Banner/>
         <Suspense fallback ={<p>Loading...<LinearProgress/></p>}>
+          
           <HospitalCatalog hospitalJson = {hospital}/>
           {
                     (profile.data.role =="admin")?
                     <AddHospitalForm></AddHospitalForm>
                     :null
-                }
+          }
+
         </Suspense>
       </main>
   )

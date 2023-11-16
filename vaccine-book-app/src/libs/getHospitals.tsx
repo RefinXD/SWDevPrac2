@@ -5,5 +5,5 @@ export default async function getHospitals(){
     // setTimeout(() => {
     //     return response.json()
     // }, 10000);
-    return response.json()
+    return await response.json()
 }

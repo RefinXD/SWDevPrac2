@@ -1,4 +1,4 @@
-
+'use client'
 import styles from './productcard.module.css'
 import Image from 'next/image'
 import InteractiveCard from './InteractiveCard'

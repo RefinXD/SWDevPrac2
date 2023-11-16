@@ -7,7 +7,7 @@ export default function HospitalCatalog({hospitalJson}:{hospitalJson:Object}){
     
         <>
         {/* Explore our selection of {hospitalJson.count} hospitals */}
-        <div style={{margin:"20px",display:"flex",
+        <div id="imagediv" style={{margin:"20px",display:"flex",
             flexDirection:"row",alignContent:"space-around",
             justifyContent:"space-around",flexWrap:"wrap",padding:"10px"}}>
                 {hospitalJson.data.map((dataItem) =>(

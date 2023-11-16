@@ -1,6 +1,4 @@
-'use client'
-import Image from 'next/image'
-
+'user client'
 export default function InteractiveCard({children,contentName}:{children:React.ReactNode, contentName:string}){
     function onClick(){
         console.log(contentName)
